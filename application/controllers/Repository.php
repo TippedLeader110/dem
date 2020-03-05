@@ -4,6 +4,11 @@ date_default_timezone_set('Asia/Jakarta');
 
 class Repository extends CI_Controller {
 
+	function __construct(){
+		parent::__construct();
+		$this->load->model('RepoModel');
+	}
+
 	public function index()
 	{
 		$this->load->view('repo/layout/main');
@@ -24,6 +29,25 @@ class Repository extends CI_Controller {
 	public function login()
 	{
 		$this->load->view('repo/login');	
+	}
+
+	public function do_login(){
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		if ($this->RepoModel->login($username,$password)==TRUE) {
+			if ($this->session->status=='a') {
+				echo "a";
+			}
+			elseif ($this->session->status=='a') {
+				echo "p";
+			}
+			else{
+				echo "n";
+			}
+		}
+		else{
+			echo "0";
+		}
 	}
 
 }
