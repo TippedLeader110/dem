@@ -1,0 +1,498 @@
+/* Custom CSS */
+
+body {
+  scroll-behavior: smooth;
+    position: relative;
+    padding-top: 3.5rem;
+        }
+
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+        }
+/* Navbar */
+
+.bg-dark {
+    background-color: #f4f4f4!important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #232020;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    border-bottom: 2px solid #232020;
+    color: #3a3535;
+    font-weight: 600;
+}
+
+.active {
+    border-bottom: 2px solid #232020;
+    color: #232020!important;
+    font-weight: 600;
+}
+
+/* Carousel */
+
+.carousel-caption {
+    padding-bottom: 12%;
+}
+
+.carousel-caption h3 {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 24px;
+    color: #21ddfb;
+}
+
+/* Buttons */
+
+.btn-info {
+    background-color:#21ddfb;
+    padding: 1rem 4rem;
+    border:3px solid transparent;
+    width: 225px;
+}
+
+.btn-info:hover {
+    background-color:transparent;
+    border:3px solid #21ddfb;
+    color: #21ddfb;
+}
+
+.btn-info:active {
+    background-color:transparent !important;
+    border:3px solid #21ddfb !important;
+    color: #21ddfb !important;
+}
+
+/* Specials */
+
+.specials {
+    background: #2b2b2b;
+    padding: 50px 20px;
+}
+.specials h2 {
+    color:#fff;
+}
+
+/* Team */
+
+#team {
+    padding: 50px 10px;
+    background: linear-gradient(#21ddfb, #19a4ba);
+}
+
+
+/* Video Background */
+
+.wclb {
+    padding-top: 300px;
+}
+
+
+/* Menu */
+
+#menu {
+    padding: 50px 10px;
+}
+
+.card {
+    box-shadow: 2px 5px 20px #777;
+}
+
+.modal-content {
+    background:#21ddfb;
+}
+
+.mn {
+    color:#fff;
+}
+
+/* Parallax */
+
+#plx {
+    background: url(../img/wine.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wtitle {
+    padding: 150px 20px;
+}
+
+.wtitle h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Wines List */
+
+#wines {
+    background:#21ddfb;
+    padding:100px 20px;
+}
+
+.wlt {
+    padding-bottom:50px;
+}
+
+/* Jumbotron */
+
+#jumbo {
+    background:#e9ecef;
+}
+
+/* Overlay */
+
+.ovl {
+    opacity: 0;
+    transition: 1s;
+}
+
+.ovl:hover {
+    opacity: 1;
+    background: rgb(0,0,0,0.6);
+}
+
+/* Locations */
+
+#locations {
+    padding: 100px 50px;
+    background: url(../img/world.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.loc img {
+    margin-right:10px;
+    transition-duration: 1.5s;
+
+
+}
+
+.loc img:hover {
+    transform:scale(3,3);
+    box-shadow: 5px 5px 15px #333;
+    z-index: 1;
+    position: absolute;
+}
+
+/* Testimonials */
+
+#testimonials {
+    background:#2b2b2b;
+}
+
+.revs {
+    padding: 100px;
+}
+
+.carousel-item.active {
+    border:none;
+}
+
+.carousel-inner {
+    min-height:300px;
+}
+
+/* Video Section */
+
+#vid {
+    padding:100px 0px;
+    background: #111;
+}
+
+/* Hiring */
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
+.hir h1 {
+    text-shadow: 5px 5px 10px #555;
+
+}
+
+/* Pop Up Box */
+
+.pop-box {
+    width:300px;
+    box-shadow:5px 10px 25px #555;
+    position: fixed;
+    z-index: 9999;
+    right: -300px;
+    bottom: 15%;
+    transition: 0.7s ease-in-out;
+    -moz-transition: 0.7s ease-in-out;
+    -webkit-transition: 0.7s ease-in-out;
+}
+
+.pop {
+    width: 370px;
+    background:#ffffff;
+    padding-top: 7px;
+    padding-left: 7px;
+    margin-left: -53px;
+    margin-top: -2px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 5px 10px 25px #555;
+}
+
+.pop img {
+    padding-right:60px;
+}
+
+.pop-box:hover {
+    right: 0px;/* Footer */
+}
+
+/* Number Counter */
+
+#numbers {
+    background:#21ddfb;
+    padding:100px 0px;
+}
+.numc {
+    background: #fff;
+    height: 150px;
+    width: 150px;
+    padding-top: 50px;
+    border-radius: 50%;
+    font-size:40px;
+    color:#21ddfb;
+}
+.numd {
+    padding-top: 30px;
+}
+
+/* Contact */
+
+#contact {
+    padding:100px 0;
+    box-shadow:5px 10px 25px #555;
+    position:relative;
+    z-index:22;
+}
+.cbtn {
+    margin-top: 57px;
+}
+
+
+/* Footer */
+
+#footer {
+    background:#333;
+    padding: 10px;
+}
+
+.cpt {
+    padding-top: 29px;
+}
+
+.ftaw i {
+    font-size: 50px;
+    color: #21ddfb;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
+/* Back To top */
+
+.btt {
+    display:none;
+    background: #21ddfb7a;
+    width: 65px;
+    position: fixed;
+    right: -12px;
+    bottom: 19px;
+    z-index: 9998;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.btt:hover {
+    background: #21ddfb;
+    box-shadow: 5px 10px 25px #555;
+}
+
+.btt i {
+    color: #ffffff7a;
+    font-size: 45px;
+    padding: 7px;
+}
+
+.btt i:hover {
+    color:#fff;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+  display:block;
+}
+
+.kompetisi-form{
+
+  box-sizing: border-box;
+  width: 80%;
+  background: #f4f4f4;
+  height: auto;
+  padding: 50px 40px;
+  border-radius: 10px;
+  position: relative;
+  align-items: center;
+
+  /* width: 90%;
+  height: auto;
+  position: absolute;
+  background: #ffffff;
+
+  border-radius: 10px;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 5px 5px 5px grey; */
+
+}
+/* FORM DAFTAR KOMPETISI */
+
+.row-group{
+  padding: 10px 10px;
+  background: #ffffff;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.form-daftar{
+  width: 100%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+}
+
+ .form-daftar input{
+  width: 100%;
+  height: 100%;
+  color: #616161;
+  padding-top: 20px;
+  border: none;
+  outline:none;
+  padding-left: 3px;
+
+
+
+}
+
+.form-daftar label {
+  position: absolute;
+  bottom: -8px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #616161;
+}
+
+.form-daftar label::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid royalblue;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left 0px;
+  transition: all 0.3s ease;
+  color: #616161;
+}
+
+.form-daftar input:focus + .label-name .content-name, .form-daftar input:valid + .label-name .content-name{
+  transform: translateY(-120%);
+  font-size: 14px;
+  color: royalblue;
+}
+
+.form-daftar input:focus + .label-name::after, .form-daftar input:valid + .label-name::after{
+  transform: translateX(0%);
+}
+
+
+/* .input-group .label{
+  color: #8d8d8d;
+  position: absolute;
+  top: 20px;
+  left: 13px;
+
+} */
+/* Media Queries */
+
+@media only screen and (max-width:991px) {
+    .blogo {
+        text-align:center;
+    }
+}
+
+
+
+
+
+
+
+/*
+@media only screen and (max-width:1500px) {
+    .carousel-caption {
+        padding-bottom: 8%;
+    }
+}
+
+@media only screen and (max-width:1199px) {
+    .carousel-caption h3 {
+        font-size: 32px;
+    }
+    .carousel-caption p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .carousel-caption p {
+        display:none;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .carousel-caption h3 {
+        font-size: 24px;
+    }
+    .carousel-caption {
+        padding-bottom: 6%;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    #carouselFull {
+        display:none;
+    }
+    #about {
+        margin-top: 80px;
+    }
+}*/
