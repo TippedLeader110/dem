@@ -29,7 +29,7 @@
 
 	}
 	*/
-	.login{
+	.daftar{
 		position: absolute;
 		/*background: #5DBCD2;*/
 		background: white;
@@ -43,8 +43,8 @@
 		box-sizing: border-box;
 	}
 
-	.login form{
-		top: 20%;
+	.daftar form{
+		top: 15%;
 		position: relative;
 	}
 
@@ -61,7 +61,6 @@
 		border-radius: 2px;
 		color: white;
 		font-weight: bold;
-		transition: .2s;
 	}
 
 	button.input-box:hover{
@@ -77,7 +76,7 @@
 		box-sizing: border-box;
 		font-weight: bold;
 	}
-
+	
 	input:focus,
 	input:valid{
 		border-bottom: 2px solid #5DBCD2;
@@ -103,5 +102,10 @@
 .head{
 	font-weight: bold;
 }
+
+
+
+
+
 
 

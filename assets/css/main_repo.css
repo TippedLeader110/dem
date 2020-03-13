@@ -6,14 +6,18 @@
 
 body{
 	margin: 0;
-	background-color: #f2f2f2;
+	background-color: #f2f2f3;
 	height: 1024px;
-	background-image: url('../img/home/back.jpeg');
+	/*background-image: url('../img/home/back.jpeg');*/
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding-top: 80px;
+	padding-top: 70px;
 	/*background-attachment: fixed;*/
+}
+
+.container{
+	min-width: 90%;
 }
 
 .cnavbar{
@@ -83,7 +87,17 @@ body{
 }
 
 #content{
+	padding: 0px;
+}
+
+.content{
 	padding: 30px;
+}
+
+.content-border{
+	padding: 30px;
+	border-radius: 3px;
+	border: #b4b4b4 0.3px solid;
 }
 
 .line{

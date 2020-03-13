@@ -11,8 +11,8 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="home">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,12 +26,19 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('repository/daftar') ?>">Daftar</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('repository/login') ?>">Login</a>
-      </li>
+      <?php if ($this->session->login==TRUE): ?>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="profile">Profile</a>
+        </li>
+      <?php endif ?>
+      <?php if ($this->session->login!=TRUE): ?>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo base_url('repository/daftar') ?>">Daftar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo base_url('repository/login') ?>">Login</a>
+        </li>
+      <?php endif ?>
     </ul>
   </div>
 </nav>

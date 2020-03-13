@@ -27,18 +27,41 @@ class Repository extends CI_Controller {
 	}
 
 	public function login()
-	{
+	{	
 		$this->load->view('repo/login');	
 	}
 
-	public function do_login(){
-		$username = $this->input->post('username');
+	public function signup(){
+		$this->load->view('repo/daftar');		
+	}
+
+	public function do_signup(){
+		$fullname = $this->input->post('fullname');
 		$password = $this->input->post('password');
-		if ($this->RepoModel->login($username,$password)==TRUE) {
+		$email = $this->input->post('email');
+
+		$data = array(
+			'full_name' => $fullname,
+			'email' => $email,
+			'password' => password_hash($password, PASSWORD_DEFAULT)
+			 );
+
+		if ($this->RepoModel->daftar($data)==TRUE) {
+			echo "1";
+		}
+		else{
+			echo "0";
+		}
+	}
+
+	public function do_login(){
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+		if ($this->RepoModel->login($email,$password)==TRUE) {
 			if ($this->session->status=='a') {
 				echo "a";
 			}
-			elseif ($this->session->status=='a') {
+			elseif ($this->session->status=='p') {
 				echo "p";
 			}
 			else{
@@ -48,6 +71,16 @@ class Repository extends CI_Controller {
 		else{
 			echo "0";
 		}
+	}
+
+
+	public function profile(){
+		$this->load->view('repo/index/profile');
+		// $this->load->view('repo/index/infoProfile');
+	}
+
+	public function profile_fileupload(){
+		$this->load->view('repo/index/upload');
 	}
 
 }

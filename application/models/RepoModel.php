@@ -3,11 +3,14 @@ define('PUBPATH',str_replace(SELF,'',FCPATH)); // added
 defined('BASEPATH') OR exit('No direct script access allowed');
 class RepoModel extends CI_Model {
 
-	public function login($username, $password){
-		$cari = $this->db->where('username',$username)->where('password', $username)->get('users');
-		if ($cari->num_rows()==0) {
-			$sesi = array(
-				'username' => $username,
+	public function login($email, $password){
+		$cari = $this->db->where('email',$email)->get('users');
+		$match = password_verify($password , $cari->row()->password);
+		// echo $cari->num_rows();
+		if ($match) {
+			if ($cari->num_rows()!=0) {
+				$sesi = array(
+				'email' => $email,
 				'login' => TRUE,
 				'full_name' => $cari->row()->full_name,
 				'id_u' => $cari->row()->id_user,
@@ -23,9 +26,10 @@ class RepoModel extends CI_Model {
 				$status='Normal user login';
 
 			}
-			$this->session->set_userdata('$sesi');
+			$this->session->set_userdata($sesi);
 			$this->RepoModel->logLogin($this->session->id_u, $status);
 			return true;
+			}
 		}
 		else{
 			return false;
@@ -53,4 +57,16 @@ class RepoModel extends CI_Model {
 		getenv('REMOTE_ADDR');
 		return $ip;
 	}
+
+	public function daftar($data){
+		if ($this->db->insert('users',$data)) {
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
+
+
 }

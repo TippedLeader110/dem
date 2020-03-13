@@ -9,8 +9,7 @@
 </head>
 <body>
 	<?php $this->load->view('repo/layout/navbar') ?>
-
-	<div id="content"  class="container bg-white rounded-sm">
+	<div id="content">
 		<div id="loading-prog">
 			<div class="line">
 			</div>
@@ -32,6 +31,24 @@
 
 	$('#content').load('<?php echo base_url('repository/mainPage') ?>',function() {
 		$('#loading-prog').hide();
+	});
+
+	$('#home').click(function(event) {
+		event.preventDefault();
+		$('#content').empty();
+		$('#loading-prog').show();
+		$('#content').load('<?php echo base_url('repository/mainPage') ?>',function() {
+		$('#loading-prog').hide();
+	});
+		$('#profile').removeClass('active');
+		$(this).addClass('active');
+	});
+
+	$('#profile').click(function(event) {
+		event.preventDefault();
+		$('#content').load('<?php echo base_url('repository/profile') ?>').fadeIn('slow');
+		$('#home').removeClass('active');
+		$(this).addClass('active');
 	});
 
 </script>
