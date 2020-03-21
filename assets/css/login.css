@@ -33,10 +33,10 @@
 		position: absolute;
 		/*background: #5DBCD2;*/
 		background: white;
-		top: 0;
+		top: 2%;
 		left: 50%;
-		width: 450px;
-		height: 100%;
+		width: 400px;
+		height: 95%;
 		/*transform: translate(-50%, -50%);*/
 		box-shadow: 0px 15px 50px rgba(0,0,0,0.5);
 		padding: 50px;
@@ -65,17 +65,17 @@
 	}
 
 	button.input-box:hover{
-		background: #50A4B7;
+		background: #3897f0;
 	}
 
 	input{
-		font-size: 16px;
+		font-size: 15px;
 		border: none;
 		border-bottom: 2px solid #777;
 		outline: 0;
 		padding: 10px;
 		box-sizing: border-box;
-		font-weight: bold;
+		font-weight: ;
 	}
 
 	input:focus,
@@ -97,7 +97,7 @@
 
 .forgot{
 	color: #777 !important;
-	font-weight: bold;
+	font-weight: ;
 }	
 
 .head{

@@ -18,7 +18,7 @@
 		<button class="input-box" id="login">Login</button>
 		<div class="d-flex justify-content-between">
 			<span><a href="<?php echo base_url("repository/signup") ?>" class="forgot">Daftar akun</a></span>
-			<span><a href="<?php echo base_url("repository/login") ?>" class="forgot">Lupa Password</a></span>
+			<span><a href="<?php echo base_url("repository/login") ?>" class="forgot">Lupa kata sandi?</a></span>
 		</div>
 		</form>
 	</div>
