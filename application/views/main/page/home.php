@@ -1,40 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Styles Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer felis neque, suscipit eget dolor quis, accumsan imperdiet elit. Praesent quis mauris eu quam malesuada auctor. Etiam vitae ante sapien. Sed mauris dui, varius non tempor in, semper fringilla ipsum. Phasellus nec purus enim. Nulla eget fringilla mi, id iaculis ante.">
-    <meta name="author" content="">
-    <link rel="icon" href="<?php echo base_url('/assets/img/fav.png')?>">
-
-    <title>Style | Great Food and Wine</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('/assets/css/custom.css') ?>">
-
-    <!-- Font Awesome CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-</head>
-
-
-<body data-spy="scroll" data-target="#navbarsExampleDefault">
-
 <?php
-  $this->load->view('layout/navbar.php'); // NGELOAD NAVBAR
-  $this->load->view('layout/carousel.php');
-  $this->load->view('layout/popbox.php');
-
- ?>
-
-
-
-
-    <div id="about" class="container">
+$this->load->view('main/layout/carousel');
+$this->load->view('main/layout/popbox');
+?>
+<div id="about" class="container">
         <div class="starter-template">
             <h1 class="mb-5">Styles Best Food and Wine Bar</h1>
             <p>Use this document as a way to quickly start any new project.All you get is this text and a mostly barebones HTML document. In et elit felis. Aliquam ac vehicula ligula, a dapibus sem. Curabitur egestas odio sit amet purus sollicitudin facilisis eu vel risus. Morbi id ipsum vitae mi accumsan venenatis. Phasellus fringilla venenatis diam consectetur iaculis. Duis tempor mi lectus, in ultrices risus semper vitae. Maecenas interdum et metus et finibus. Aliquam condimentum sagittis massa, vel rutrum urna posuere et.</p>
@@ -668,22 +636,3 @@
         }
       });
      }
-
-     // Written by @labnol
-    </script>
-    <script>
-        myID = document.getElementById("bttp");
-
-        var myScrollFunc = function() {
-          var y = window.scrollY;
-          if (y >= 1200) {
-            myID.className = "btt show"
-          } else {
-            myID.className = "btt hide"
-          }
-        };
-
-        window.addEventListener("scroll", myScrollFunc);
-    </script>
-</body>
-</html>
