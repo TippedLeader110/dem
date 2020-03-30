@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	margin: 0;
+	background-color: #f2f2f3;
+	height: 1024px;
+	/*background-image: url('../img/home/back.jpeg');*/
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 70px;
+	/*background-attachment: fixed;*/
+}
+
+.container{
+	min-width: 90%;
+}
+
+.cnavbar{
+	top: 0;
+	position: -webkit-sticky;
+	display: flex;
+	position: sticky;
+	margin: 0;
+	padding: 10px 10px;
+	justify-content: space-between;
+  	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.static{
+	background-color: #333;
+}
+
+.static.bscroll a{
+	color: white;
+}
+
+.cnavbar .item ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+	overflow: hidden;
+}
+
+.cnavbar .item li {
+ 	float: left;
+}
+
+.cnavbar .item li:hover {
+	border-bottom: 1px solid black;
+}
+
+.cnavbar.static .item li:hover {
+	background: white;
+	border-bottom: 0px solid black;
+}
+
+.cnavbar.static .item li:hover a{
+	background: white;
+	color: black;
+}
+
+.cnavbar a
+{
+	color: black;
+}
+
+.cnavbar .item li a {
+  	display: block;
+  	text-align: center;
+ 	padding: 14px 22px;
+  	text-decoration: none;
+}	
+
+.cnavbar .logo a{
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+#content{
+	padding: 0px;
+}
+
+.content{
+	padding: 30px;
+}
+
+.content-border{
+	padding: 30px;
+	border-radius: 3px;
+	border: #b4b4b4 0.3px solid;
+}
+
+.line{
+	height: 12px;
+	margin: 10px;
+	animation: pulse 1s infinite ease-in-out;
+	-webkit-animation:pulse 1s infinite ease-in-out;
+}
+
+@media only screen and (max-width : 320px) {
+
+/* Styles */
+
+}
+.line:nth-child(1){
+	width: 90%;
+	height: 40px;
+}
+.line:nth-child(2){
+	width: 80%;
+}
+.line:nth-child(3){
+	width: 90%;
+	height: 200px;
+}
+.line:nth-child(4){
+	width: 90%;
+	height: 40px;
+}
+.line:nth-child(5){
+	width: 80%;
+}
+.line:nth-child(6){
+	width: 90%;
+	height: 200px;
+}
+
+@keyframes pulse
+{
+	0%{
+		background-color: rgba(165,165,165,.1);
+	}
+	50%{
+		background-color: rgba(165,165,165,.3);
+	}
+	100%{
+		background-color: rgba(165,165,165,.1);
+	}
+}
+
+@-webkit-keyframes pulse
+{
+	0%{
+		background-color: rgba(165,165,165,.1);
+	}
+	50%{
+		background-color: rgba(165,165,165,.3);
+	}
+	100%{
+		background-color: rgba(165,165,165,.1);
+	}
+}
+

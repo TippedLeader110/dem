@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+	font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (min-width : 600px) {
+
+	body{
+	margin: 0;
+	padding: 0;
+	background-color: #f2f2f2;
+	background-image: url('../img/home/bg-login1.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	}
+	/*
+	body:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 30%;
+		height: 100%;
+		background: white;
+		opacity: 0.8;
+
+	}
+	*/
+	.login{
+		position: absolute;
+		/*background: #5DBCD2;*/
+		background: white;
+		top: 3%;
+		left: 50%;
+		width: 400px;
+		height: 93%;
+		/*transform: translate(-50%, -50%);*/
+		box-shadow: 0px 15px 30px rgba(0,0,0,0.5);
+		padding: 50px;
+		box-sizing: border-box;
+	}
+
+	.logo {
+    	display: inline-block !important;
+        margin-top: -10px;
+	}
+
+	.login form{
+		top: 20%;
+		position: relative;
+		margin-top: -80px;
+	}
+
+	.input-box{
+		margin: 20px 0;
+		padding-top: 10px;
+	}
+
+	button.input-box{
+		width: 100%;
+		padding: 7px;
+		border-color: #5DBCD2;
+		background: #5DBCD2;
+		border: 0px solid transparent;
+		border-radius: 2px;
+		color: white;
+		font-weight: bold;
+		transition: .2s;
+		margin-top: 10px;
+	}
+
+	button.input-box:hover{
+		background: #3897f0;
+	}	
+
+	input{
+		font-size: 15px;
+		border: none;
+		border-bottom: 2px solid #777;
+		outline: 0;
+		padding-top: 30px;
+		padding-left: 5px;
+		box-sizing: border-box;
+		font-weight: ;
+	}
+
+	input:focus,
+	input:valid{
+		border-bottom: 2px solid #5DBCD2;
+	}
+
+	input:invalid{
+		border-bottom: 2px solid #777;
+	}
+
+}
+.done{
+	border-bottom: 2px solid #5DCF42 !important;
+}
+.fail{
+	border-bottom: 2px solid #C71E2E !important;
+}
+
+.forgot{
+	color: #383838 !important;
+	font-size: 14px;
+	font-style: italic;
+}
+
+.create{
+	color: #0033FF !important;
+	font-size: 20px;
+	font-family: calibri;
+}	
+
+.head{
+	font-weight: bold;
+}
