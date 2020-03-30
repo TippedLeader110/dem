@@ -10,17 +10,21 @@
 </head>
 <body>
 	<div class="login">
+		<a href="<?php echo base_url('') ?>">
+			<center><img class="logo" src="<?php echo base_url('assets/img/home/logo.png') ?>" alt="DEM Indonesia" width="170" height="170"></center>
+		</a>
 		<form class="fo">
-		<h1 class="head" >Sign In</h1>
+		<!-- <h1 class="head" >Sign In</h1>-->
 		<span id="span" style="margin-top: 10px;display: none;"></span>
 		<input type="text" name="username" id="username" placeholder="Email" required="required" value="" class="input-box input-group">
 		<input type="password" name="password" id="password" placeholder="Password" required="required" value="" class="input-box input-group">
 		<button class="input-box" id="login">Login</button>
-		<div class="d-flex justify-content-between"  style="margin-left: 33%">
-			<span><a href="<?php echo base_url("repository/login") ?>" class="forgot">Lupa kata sandi?</a></span>
+		<div class="d-flex justify-content-between" style="margin-top: -10px">
+			<a href="<?php echo base_url("repository/login") ?>" class="forgot">Lupa kata sandi?</a>
 		</div>
-		<div class="d-flex justify-content-between" style="margin-left: 38%">
-			<span><a href="<?php echo base_url("repository/signup") ?>" class="create">Daftar Akun</a></span>
+		<div class="d-flex justify-content-between" style="margin-left: 90px; margin-top: 100px">
+			<span><a href="<?php echo base_url("repository/signup") ?>" class="create">Daftar Akun <img src="<?php echo base_url('assets/img/home/panah1.png') ?>" alt=""></a>
+			</span>
 		</div>
 		</form>
 	</div>
@@ -68,7 +72,7 @@
 			});
 		}
 		else{
-			$('#span').html('<b>Tolong isi semua kolom !!</b>');
+			$('#span').html('<b>Mohon untuk mengisi semua kolom !!</b>');
 			$('#span').fadeIn('slow');
 			$('#username').removeClass('done');
 			$('#password').removeClass('done');

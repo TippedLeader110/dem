@@ -33,19 +33,25 @@
 		position: absolute;
 		/*background: #5DBCD2;*/
 		background: white;
-		top: 2%;
+		top: 3%;
 		left: 50%;
 		width: 400px;
-		height: 95%;
+		height: 93%;
 		/*transform: translate(-50%, -50%);*/
-		box-shadow: 0px 15px 50px rgba(0,0,0,0.5);
+		box-shadow: 0px 15px 30px rgba(0,0,0,0.5);
 		padding: 50px;
 		box-sizing: border-box;
+	}
+
+	.logo {
+    	display: inline-block !important;
+        margin-top: -10px;
 	}
 
 	.login form{
 		top: 20%;
 		position: relative;
+		margin-top: -80px;
 	}
 
 	.input-box{
@@ -100,17 +106,16 @@
 
 .forgot{
 	color: #383838 !important;
-	font-size: 15px;
+	font-size: 14px;
+	font-style: italic;
 }
 
 .create{
 	color: #0033FF !important;
-	font-size: 15px;
-	position: center;
+	font-size: 20px;
+	font-family: calibri;
 }	
 
 .head{
 	font-weight: bold;
 }
-
-
