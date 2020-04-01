@@ -1,0 +1,47 @@
+.cnavbar{
+	top: 0;
+	position: -webkit-sticky;
+	display: flex;
+	position: sticky;
+	margin: 0;
+	padding: 10px 10px;
+	justify-content: space-between;
+  	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color: #4682B4;
+}
+
+.logo{
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.col{
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+.tbl{
+	padding-top: 11px;
+}
+
+.img{
+	 max-width: 170px; 
+	 max-height: 170px;"
+}
+
+.field-wel{
+	background-color: #808080;
+	min-width: 20px;
+    max-width: 250px;
+    min-height: 20px;
+    border-radius: 9px;
+    margin-top: 15px;
+    padding-top:3px;
+    padding-bottom: 1px;
+    font-family: "Calibri", Times, sans-serif;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #778899;
+}
