@@ -11,22 +11,19 @@
                     <a class="nav-link" href="#carouselFull">Home </a>
                 </li>
                 <li class="nav-item  mr-4">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item  mr-4">
-                    <a class="nav-link" href="#team">Region</a>
-                </li>
-                <li class="nav-item  mr-4">
-                    <a class="nav-link" href="#menu">Menu</a>
-                </li>
-                <li class="nav-item  mr-4">
-                    <a class="nav-link" href="#wines">Wines</a>
+                    <a class="nav-link" href="#menu">Berita</a>
                 </li>
                 <li class="nav-item  mr-4">
                     <a class="nav-link" href="<?php echo base_url()?>Repository">Repositori</a>
                 </li>
                 <li class="nav-item mr-4">
                   <a class="nav-link" href="<?php echo base_url()?>Regis">Kompetisi</a>
+                </li>
+                <li class="nav-item  mr-4">
+                    <a class="nav-link" href="#team">Region</a>
+                </li>
+                <li class="nav-item  mr-4">
+                    <a class="nav-link" href="#about">Tentang</a>
                 </li>
             </ul>
         </div>
