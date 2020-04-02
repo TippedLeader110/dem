@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Styles Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer felis neque, suscipit eget dolor quis, accumsan imperdiet elit. Praesent quis mauris eu quam malesuada auctor. Etiam vitae ante sapien. Sed mauris dui, varius non tempor in, semper fringilla ipsum. Phasellus nec purus enim. Nulla eget fringilla mi, id iaculis ante.">
-    <meta name="author" content="">
-    <link rel="icon" href="<?php echo base_url('/assets/logo/dem.png')?>">
+    <link rel="icon" href="<?php echo base_url()?>assets/logo/1.png">
 
     <title>DEM | Dewan Energi Mahasiswa</title>
 
@@ -13,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('/assets/css/custom.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/modules/custom.css">
 
     <!-- Font Awesome CSS -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -30,13 +26,6 @@
 
  ?>
 
-
-
-
-    
-
-     // Written by @labnol
-    </script>
     <script>
         myID = document.getElementById("bttp");
 

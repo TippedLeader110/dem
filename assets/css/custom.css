@@ -13,16 +13,16 @@ body {
 /* Navbar */
 
 .bg-dark {
-    background-color: #f4f4f4!important;
+    background-color: #f4f4f4;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #232020;
+    color: #ffffff;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
     border-bottom: 2px solid #232020;
-    color: #3a3535;
+    color: #ffffff;
     font-weight: 600;
 }
 

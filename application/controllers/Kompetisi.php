@@ -10,6 +10,6 @@ class Kompetisi extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('/page/daftar_kompetisi.php');
+		$this->load->view('main/page/register.php');
 	}
 }
