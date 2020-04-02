@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Styles Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer felis neque, suscipit eget dolor quis, accumsan imperdiet elit. Praesent quis mauris eu quam malesuada auctor. Etiam vitae ante sapien. Sed mauris dui, varius non tempor in, semper fringilla ipsum. Phasellus nec purus enim. Nulla eget fringilla mi, id iaculis ante.">
     <meta name="author" content="">
-    <link rel="icon" href="<?php echo base_url('/assets/logo/indonesia.jpg')?>">
+    <link rel="icon" href="<?php echo base_url('/assets/logo/dem.png')?>">
 
     <title>DEM | Dewan Energi Mahasiswa</title>
 
@@ -54,3 +54,4 @@
     <?php $this->load->view($page)?>
 </body>
 </html>
+html>
