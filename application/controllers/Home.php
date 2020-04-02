@@ -9,14 +9,7 @@ class Home extends CI_Controller {
 	}
 
 	public function index()	{
-		$data = [
-			'page'=>'main/page/home',
-			'title' => 'DEM'
-		];
-		$this->load->view('main/layout/index', $data);
-	}
-
-	public function mainpage(){
-		$this->load->view('main/page/main');
+		$data['page'] = 'main/page/home';
+		$this->load->view('main/layout/main',$data);
 	}
 }
