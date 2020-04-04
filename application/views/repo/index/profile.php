@@ -11,10 +11,10 @@
 <body data-spy="scroll" data-target="#navbarsExampleDefault">
 	<div class="cnavbar bscroll">
 		<div class="logo">
-			<a href="<?php echo base_url() ?>" style="color: white"><img class="logo" src="<?php echo base_url('assets/img/home/logo-pf.png') ?>" alt="DEM Indonesia" width="70" height="70"> DEM Indonesia</a>
+			<a href="<?php echo base_url() ?>" style="color: white"><img class="logo" src="<?php echo base_url('assets/img/home/1.png') ?>" alt="DEM Indonesia" width="41" height="42"> DEM Indonesia</a>
 		</div>
 		<div class="dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" style="color:white; padding-top: 20px; margin-right: 40px; font-size: 20px;">dia_nadnad</a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" style="color:white; padding-top: 5px; margin-right: 40px; font-size: 20px;">dia_nadnad</a>
               	<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               		<a class="dropdown-item" href="#">Notifikasi</a>
               		<a class="dropdown-item" href="#">Pengaturan</a>
@@ -36,8 +36,8 @@
 	            </div>
 	        </div>
 	    </div>
-	    <div class="container">
-	    	<div class="row">
+	    <div>
+	    	<div class="row" style="padding-left: 400px; padding-top: 10px;">
 		        <div>
 					<table class="table">
 						<tr>
@@ -78,7 +78,7 @@
 					</table>
 				</div>
 			</div>
-			<div><button class="input-box" id="login">Edit Profil</button></div>
+			<div style="padding-left: 620px; margin-top: -30px;"><button class="input-box" id="login">Edit Profil</button></div>
 	    </div>
 	</div>
 

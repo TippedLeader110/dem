@@ -10,7 +10,10 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    background-color: rgb(26, 128, 127,0.9);;
+    background-color: rgb(26, 128, 127,0.9);
+    height: 70px;
+    padding-left: 60px;
+    padding-top: 13px;
 }
 
 .logo{
@@ -72,7 +75,5 @@ button.input-box{
 		font-weight: bold;
 		font-family: inherit;
 		transition: .2s;
-		margin-top: -100px;
-		margin-left: 130px;
 		background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
 }
