@@ -14,7 +14,7 @@
 			<a href="<?php echo base_url() ?>" style="color: white"><img class="logo" src="<?php echo base_url('assets/img/home/logo-pf.png') ?>" alt="DEM Indonesia" width="70" height="70"> DEM Indonesia</a>
 		</div>
 		<div class="dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" style="color:white">Account</a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" style="color:white; padding-top: 20px; margin-right: 40px; font-size: 20px;">dia_nadnad</a>
               	<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               		<a class="dropdown-item" href="#">Notifikasi</a>
               		<a class="dropdown-item" href="#">Pengaturan</a>
@@ -29,7 +29,7 @@
 	            <div class="card-body">
 	                <div class="page-header-image" align="center">
 	                    <img class="img" src="<?php echo base_url('assets/img/home/user.png') ?>">
-	                    <div class="field-wel">
+	                    <div style="padding-top: 15px;">
 	          				<h4><b>Nadia Siti Namira</b></h4>
 	        			</div>
 	                </div>
@@ -42,11 +42,11 @@
 					<table class="table">
 						<tr>
 							<td><ul class="contentnode"><dl><dt>Jabatan</dt><dd>Karyawan</a></dd></dl></ul></td>
-							<td><a href="#">Edit</a></td>
+							<td></td>
 						</tr>
 						<tr>
 							<td><ul class="contentnode"><dl><dt>Email</dt><dd>nadiasitinamira@gmail.com</a></dd></dl></ul></td>
-							<td><a href="#">Edit</a></td>
+							<td></td>
 						</tr>
 						<tr><td></td><td></td></tr>
 					</table>
@@ -55,16 +55,30 @@
 					<table class="table">
 						<tr>
 							<td><ul class="contentnode"><dl><dt>Status</dt><dd>Aktif</a></dd></dl></ul></td>
-							<td><a href="#">Edit</a></td>
+							<td></td>
 						</tr>
 						<tr>
 							<td><ul class="contentnode"><dl><dt>Telepon</dt><dd>0813-9719-8741</a></dd></dl></ul></td>
-							<td><a href="#">Edit</a></td>
+							<td></td>
+						</tr>
+						<tr><td></td><td></td></tr>
+					</table>
+				</div>
+				<div>
+					<table class="table">
+						<tr>
+							<td><ul class="contentnode"><dl><dt>Region</dt><dd>SUMUT</a></dd></dl></ul></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><ul class="contentnode"><dl><dt>Tentang</dt><dd>Yeeaayy...</a></dd></dl></ul></td>
+							<td></td>
 						</tr>
 						<tr><td></td><td></td></tr>
 					</table>
 				</div>
 			</div>
+			<div><button class="input-box" id="login">Edit Profil</button></div>
 	    </div>
 	</div>
 
