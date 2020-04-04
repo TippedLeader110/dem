@@ -22,10 +22,17 @@
 .col{
 	padding-top: 10px;
 	padding-left: 20px;
+	padding-right: 20px;
 }
 
-.tbl{
-	padding-top: 11px;
+.col-md{
+	padding-left: 25px;
+	padding-right: 20px;
+}
+
+.container{
+	padding-top: 15px;
+	padding-left: 300px;
 }
 
 .img{
@@ -34,7 +41,7 @@
 }
 
 .field-wel{
-	background-color: #808080;
+	background-color: white;
 	min-width: 20px;
     max-width: 250px;
     min-height: 20px;
