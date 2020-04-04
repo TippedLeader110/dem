@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: rgb(26, 128, 127,0.9);">
     <div class="container" >
-        <a class="navbar-brand" href="<?php echo base_url()?>Home"><img src="<?php echo base_url() ?>assets/logo/1.png" class="img-responsive" alt="Logo" width="10%"> <b>DEM Indonesia</b></a>
+        <a class="navbar-brand" href="<?php echo base_url()?>Home"><img src="<?php echo base_url() ?>assets/logo/1.png" class="img-responsive" alt="Logo" width="8%"> <b style="font-size: 20px">DEM Indonesia</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
