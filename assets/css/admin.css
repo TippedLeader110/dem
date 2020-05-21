@@ -1,0 +1,15 @@
+.mainpage{
+	padding: 20px 20px 20px 20px;
+	background: #e1e2e3;
+}
+.subpage{
+	padding: 20px 20px 20px 20px;
+	background: white;
+}
+input{
+	width: 300px;
+}
+
+.opaci{
+	opacity: 0.5;
+}

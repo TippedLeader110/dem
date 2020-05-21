@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Stockholm Slab";
+    src: url("http://localhost/itfest/public/custom/fonts/Stockholm-Slab.ttf.woff") format('woff');
+}
+
+.customfont {
+    font-family: "Stockholm Slab";
+    color: black;
+}

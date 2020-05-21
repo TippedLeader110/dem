@@ -14,46 +14,67 @@ class adminModel extends CI_Model {
 		return $query = $this->db->query('CALL tim_info('.$id.')')->result();
 	}
 
-	public function doLogin($user_real, $pwd)
+	public function doLogin($user_real, $password)
 	{
-		$user = $this->db
-			->where('username', $user_real)
-			->where('id_lomba', 0)
-			->get('user');
-		// var_dump($user_real);die;
-		// var_dump($user->result());die;
-		$match = password_verify($pwd , $user->row()->password);
-		$id = $user->row()->id_user;
-		$nama = $user->row()->nama;
-		$user = $user->row()->username;
+		$cari = $this->db->where('username',$user_real)->get('a_users');
+		// var_dump($user_real);
+		$match = password_verify($password , $cari->row()->password);
+		// echo $cari->num_rows();
 		if ($match) {
-				$this->session->set_userdata([
-					'username' =>  $user,
-					'status' => 'login-admin',
-					'name' => $nama
-				]);
-				$this->logLoginAdmin();
-				return 1;
+			if ($cari->num_rows()!=0) {
+				$sesi = array(
+				'email' => $cari->row()->email,
+				'login' => 'true',
+				'full_name' => $cari->row()->nama,
+				'id_u' => $cari->row()->id
+			);
+			$this->session->set_userdata($sesi);
+			$this->logLoginAdmin($user_real);
+			return true;
+			}
 		}
-		else
-		{
-			return 0;
+		else{
+			return false;
 		}
+
+
+		// $user = $this->db
+		// 	->where('username', $user_real)
+		// 	->get('a_users');
+		// // var_dump($user_real);die;
+		// // var_dump($user->result());die;
+		// $match = password_verify($pwd , $user->row()->password);
+		// $id = $user->row()->id_user;
+		// $nama = $user->row()->nama;
+		// $user = $user->row()->username;
+		// if ($match) {
+		// 		$this->session->set_userdata([
+		// 			'id' =>  $id,
+		// 			'status' => 'login-admin',
+		// 			'name' => $nama
+		// 		]);
+		// 		$this->logLoginAdmin();
+		// 		return 1;
+		// }
+		// else
+		// {
+		// 	return 0;
+		// }
 	}
 
-	public function logLoginAdmin(){
+	public function logLoginAdmin($u){
 		$ip = $this->getIP();
-		$user = $this->session->userdata('username');
+		$user = $u;
 		$query = $this->db
 			->where('username', $user)
-			->get('user');
-		$id_panitia = $query->row()->id_user;
-		$data = array('ip_address' => $ip,
-			'keterangan' => 'Login Admin',
+			->get('a_users');
+		$idU = $query->row()->id;
+		$data = array('ip' => $ip,
+			'status' => 'Login Admin',
 			'waktu' => date("Y-m-d H:i:s"),
-			'id_panitia' => $id_panitia
+			'id_admin' => $idU
 		 );
-		$this->db->insert('log_panitia', $data);
+		$this->db->insert('log_admin', $data);
 	}
 
 	public function getIP(){
@@ -127,17 +148,25 @@ class adminModel extends CI_Model {
 		return $data;
 	}
 
-	public function tambahPost($judul,$isi,$id)
+	public function tambahPost($judul,$isi,$id,$kategori)
 	{
-		$data = array('judul' => $judul , 'isi' => $isi , 'id_lomba' => $id);
+		$data = array('judul' => $judul ,
+		 			'isi' => $isi ,
+		 			'author' => $id,
+		 			'waktu' => date("Y-m-d H:i:s"),
+		 			'kategori' => $kategori
+		 			);
 		$this->db->insert('post',$data);
 		return true;
 	}
 
-	public function updatePost($judul,$isi,$id,$oldid)
+	public function updatePost($judul,$isi,$id,$oldid,$kat)
 	{
 		$this->db->set('judul', $judul);
 		$this->db->set('isi', $isi);
+		$this->db->set('kategori', $kat);
+		$this->db->set('author', $id);
+		$this->db->set('waktu', date("Y-m-d H:i:s"));
 		// $this->db->set('id_lomba', $id);
 		$this->db->where('id_post',$oldid)->update('post');
 		return true;

@@ -80,7 +80,8 @@ class Repository extends CI_Controller {
 	}
 
 	public function profile_fileupload(){
-		$this->load->view('repo/index/upload');
+		$data['kat_nama'] = $this->RepoModel->getAll('repo_kategori');
+		$this->load->view('repo/index/upload', $data);
 	}
 
 }

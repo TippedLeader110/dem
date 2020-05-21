@@ -161,3 +161,19 @@ body{
 	}
 }
 
+
+.form-control{
+	background-color: #f2f2f3;
+	background: #f2f2f3;
+}
+
+/*.form_upload:required{
+	background: white;	
+	border-color: #5DCF42;
+}
+*/
+/*
+.form_upload:invalid{
+	background: white;	
+	border-color: #5DCF42;
+}*/

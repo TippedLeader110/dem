@@ -312,6 +312,36 @@ class Admin extends CI_Controller {
 		$this->db->update('tim');
 	}
 
+	public function kategori()
+	{
+		$this->loginProtocol();
+		$dataGet = $this->db->get('kategori_post')->result();
+		$data = [
+			'title' => 'Kelolah Kategori',
+			'post' => $dataGet
+		];
+		$this->load->view('admin/page/kategori', $data);	
+	}
+
+	public function kategoriTambah()
+	{
+		$this->loginProtocol();
+		$kat = $this->input->post('kat');
+		$ddd = array('nama_kat' => $kat);
+		if ($this->db->insert('kategori_post',$ddd)) {
+			echo "1";
+		}
+		else{
+			echo "0";
+		}
+	}
+
+	public function kategoriHapus(){
+		$id = $this->input->post('value');
+		$done = $this->adminModel->deleteDatabyID($id, 'id', 'kategori_post');
+		echo $done;
+	}
+
 	public function Post()
 	{
 		$this->loginProtocol();
@@ -331,7 +361,8 @@ class Admin extends CI_Controller {
 		$data = [
 			'title' => 'Edit post',
 			'editPost' => $post,
-			'post' => $id_post
+			'post' => $id_post,
+			'kat' => $this->db->get('kategori_post')->result()
 		];
 		$this->load->view('admin/page/editPost', $data);
 	}
@@ -341,9 +372,10 @@ class Admin extends CI_Controller {
 		$this->loginProtocol();
 		$judul = $this->input->post('judul');
 		$isi = $this->input->post('isi');
+		$kategori = $this->input->post('kategori');
 		$id = $this->input->post('id');
 		$oldid = $this->input->post('oldid');
-		if($this->adminModel->updatePost($judul,$isi,$id,$oldid)) {
+		if($this->adminModel->updatePost($judul,$isi,$id,$oldid,$kategori)) {
 			echo "done";
 		}
 	}
@@ -351,7 +383,8 @@ class Admin extends CI_Controller {
 	{
 		$this->loginProtocol();
 		$data = [
-			'title' => 'Tambah Tahap'
+			'title' => 'Tambah Tahap',
+			'kat' => $this->db->get('kategori_post')->result()
 		];
 		$this->load->view('admin/page/tambahPost', $data);
 	}
@@ -361,8 +394,9 @@ class Admin extends CI_Controller {
 		$this->loginProtocol();
 		$judul = $this->input->post('judul');
 		$isi = $this->input->post('isi');
+		$kategori = $this->input->post('kategori');
 		$id = $this->input->post('id');
-		if ($this->adminModel->tambahPost($judul,$isi,$id)) {
+		if ($this->adminModel->tambahPost($judul, $isi, $id, $kategori)) {
 			echo "done";
 		}
 	}
@@ -431,31 +465,39 @@ class Admin extends CI_Controller {
 
 	public function doLogin()
 	{
-		
-		$user = $this->input->post('user');
-		$pwd = $this->input->post('pwd');
-		// echo "0";
-		// var_dump($user);
-		$num = $this->adminModel->doLogin($user, $pwd);
-		if ($num==0) {
-			echo "0";
+		$username = $this->input->post('user');
+		$password = $this->input->post('pwd');
+		if ($this->adminModel->doLogin($username,$password)==TRUE) {
+			echo "1";
 		}
 		else{
-			echo "1";
-			// var_dump($this->session->userdata('name'));
+			echo "0";
 		}
+
+		// $user = $this->input->post('user');
+		// $pwd = $this->input->post('pwd');
+		// // echo "0";
+		// // var_dump($user);
+		// $num = $this->adminModel->doLogin($user, $pwd);
+		// if ($num==0) {
+		// 	echo "0";
+		// }
+		// else{
+		// 	echo "1";
+		// 	// var_dump($this->session->userdata('name'));
+		// }
 	}
 
 	public function test(){
-		$a = 'itfestusu2020';
-		$p = password_hash("adminitfestusu2020admin", PASSWORD_DEFAULT);
+		$a = 'admin';
+		$p = password_hash("admin", PASSWORD_DEFAULT);
 		$data = ['username'=>$a, 'password' => $p];
-		$this->db->insert('user', $data);
+		$this->db->insert('a_users', $data);
 	}
 
 	public function loginProtocol()
 	{
-		if(($this->session->userdata('status') == "login-admin")){
+		if(($this->session->userdata('login') == "true")){
 			
 		}
 		else{

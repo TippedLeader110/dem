@@ -67,6 +67,9 @@ class RepoModel extends CI_Model {
 		}
 	}
 
+	public function getAll($nama){
+		return $this->db->get($nama)->result();
+	}
 
 
 }
