@@ -130,11 +130,10 @@ class Admin extends CI_Controller {
 			];
 		$this->load->view('admin/page/ajax/modalTim', $data);
 	}
+
 	##################TIM#######################
 
 	##################LOMBA#####################
-
-	
 
 	public function logTim(){
 		$this->loginProtocol();
